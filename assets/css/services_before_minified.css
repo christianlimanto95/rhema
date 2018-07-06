@@ -1,0 +1,207 @@
+.header-fixed {
+    top: 0;
+}
+
+.section {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.dark-subheader-detail {
+    -webkit-animation-delay: 0.1s;
+    -moz-animation-delay: 0.1s;
+    -ms-animation-delay: 0.1s;
+    -o-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+.description {
+    color: #002157;
+    -webkit-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+    -ms-animation-delay: 0.2s;
+    -o-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+@media all and (max-width: 767px) {
+    .section {
+        margin-top: 60px;
+        padding-top: 30px;
+    }
+
+    .description {
+        width: 90vw;
+        margin: 50px auto 100px;
+        font-size: 10pt;
+        line-height: 25px;
+        text-align: left;
+    }
+
+    .service {
+        margin-bottom: 100px;
+        overflow-y: visible;
+    }
+    
+    .service:nth-last-child(1) {
+        margin-bottom: 0;
+    }
+
+    .service-image {
+        width: 100vw;
+        margin-bottom: 20px;
+    }
+    
+    .service-text {
+        width: 100vw;
+        padding: 0 5vw;
+        color: #002157;
+    }
+
+    .service-title {
+        font-size: 16pt;
+        margin-bottom: 10px;
+    }
+    
+    .service-description {
+        font-size: 10pt;
+        line-height: 25px;
+        margin-bottom: 30px;
+    }
+
+    .number {
+        width: 25px;
+    }
+
+    .number, .text {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .text {
+        width: calc(100% - 25px);
+    }
+}
+
+@media all and (min-width: 768px) {
+    .section {
+        margin-top: 80px;
+        min-height: calc(100vh - 300px);
+        padding-top: 50px;
+    }
+
+    .description {
+        margin: 50px auto 60px;
+        font-size: 11pt;
+        line-height: 25px;
+    }
+
+    .service {
+        overflow: auto;
+    }
+    
+    .service:nth-last-child(1) {
+        margin-bottom: 0;
+    }
+    
+    .service-text {
+        color: #002157;
+    }
+    
+    .service-description {
+        font-size: 11pt;
+        line-height: 25px;
+        text-align: justify;
+        margin-bottom: 30px;
+    }
+    
+    .number {
+        width: 25px;
+    }
+
+    .number, .text {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .text {
+        width: calc(100% - 25px);
+    }
+    
+    .btn-order-now {
+        width: 160px;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .description {
+        width: 90vw;
+        margin-bottom: 80px;
+    }
+
+    .service {
+        width: 100vw;
+        padding: 0 5vw;
+        margin-bottom: 80px;
+    }
+
+    .service-image {
+        width: 90vw;
+    }
+
+    .service-title {
+        font-size: 16pt;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .btn-order-now {
+        width: 200px;
+    }
+}
+
+@media all and (min-width: 1025px) {
+    .description {
+        width: 70vw;
+        text-align: justify;
+    }
+
+    .service {
+        margin-bottom: 5vw;
+    }
+
+    .service:nth-child(odd) .service-image-container {
+        float: left;
+    }
+    
+    .service:nth-child(even) .service-image-container {
+        float: right;
+    }
+    
+    .service-image {
+        width: calc(50vw - 25px);
+    }
+
+    .service-text {
+        width: calc(35vw - 25px);
+    }
+
+    .service:nth-child(odd) .service-text {
+        float: right;
+        margin-right: 15vw;
+    }
+    
+    .service:nth-child(even) .service-text {
+        float: left;
+        margin-left: 15vw;
+    }
+
+    .service-title {
+        font-size: 16pt;
+        margin-bottom: 30px;
+    }
+
+    .btn-order-now {
+        width: 160px;
+    }
+}

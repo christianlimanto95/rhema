@@ -1,0 +1,480 @@
+.header-fixed {
+    top: 0;
+}
+
+.section {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.section-title {
+    text-align: center;
+    color: #002157;
+}
+
+.tour-detail {
+    text-align: center;
+    font-size: 14pt;
+    color: #002157;
+}
+
+.pilih-tanggal {
+    margin-top: 20px;
+    font-size: 10pt;
+    color: #0045b4;
+}
+
+div.select-date {
+    float: none;
+    margin: 10px auto 0;
+}
+
+.select-date .dropdown-container {
+    text-align: left;
+}
+
+.form-subsection-title {
+    text-align: center;
+    color: #002157;
+    margin-bottom: 30px;
+    font-size: 14pt;
+}
+
+.form-subsection-title:not(:nth-child(1)) {
+    margin-top: 60px;
+}
+
+.form-item {
+    color: #002157;
+}
+
+.form-left {
+    font-size: 10pt;
+    color: #0045b4;
+}
+
+.form-titikdua {
+    opacity: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.form-right {
+    position: relative;
+}
+
+input.form-input-inline, textarea.form-input-inline {
+    padding: 5px;
+    font-size: 10pt;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+textarea.form-input-inline {
+    height: 80px;
+}
+
+.input-error {
+    border: 1px solid red;
+    color: red;
+}
+
+.error {
+    position: absolute;
+    top: 5px;
+    left: 350px;
+    white-space: nowrap;
+    display: block;
+    color: red;
+    font-size: 9pt;
+}
+
+.jk-radio-container {
+    width: 130px;
+}
+
+.gd-radio-container {
+    width: 70px;   
+}
+
+.radio-text, .checkbox-text {
+    font-size: 10pt;
+}
+
+input.input-passport {
+    width: 150px;
+}
+
+.upload-container {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    border-radius: 2px;
+}
+
+.form-right.image-added .upload-container {
+    display: none;
+}
+
+.upload-button, .input-upload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.upload-button {
+    background-color: #002157;
+}
+
+.upload-text {
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding-top: 8px;
+    font-size: 10pt;
+}
+
+.input-upload {
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.image-preview {
+    max-width: 450px;
+    max-height: 400px;
+}
+
+.btn-delete-image {
+    display: none;
+    margin-top: -55px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    background-color: #E53935;
+    font-size: 10pt;
+    width: 150px;
+    padding: 9px 0 10px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-delete-image:hover {
+    background-color: #D32F2F;
+}
+
+.form-right.image-added .btn-delete-image {
+    position: relative;
+    display: block;
+    z-index: 10;
+}
+
+.btn-tambah-no-hp {
+    background-color: #002157;
+    color: white;
+    padding: 9px 0 10px;
+    font-size: 9pt;
+    text-align: center;
+    width: 150px;
+    cursor: pointer;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #AAA;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #AAA;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #AAA;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #AAA;
+}
+
+input.input-date, input.input-month, input.input-year {
+    text-align: center;
+}
+
+input.input-date, input.input-month {
+    width: 50px;
+}
+
+input.input-year {
+    width: 70px;
+}
+
+input.input-tempat-lahir {
+    width: 250px;
+}
+
+input.input-hp, input.input-phone, input.input-company-telephone {
+    width: 180px;
+}
+
+input.input-hp {
+    margin-bottom: 10px;
+}
+
+.status-radio-lajang, .status-radio-menikah {
+    width: 110px;
+}
+
+input.input-status-other {
+    width: 200px;
+    margin-left: 5px;
+}
+
+input.input-rs-ya {
+    width: 170px;
+    margin-left: 5px;
+}
+
+.rs-radio-tidak {
+    width: 80px;
+}
+
+.hamil-radio-container-tidak {
+    width: 80px;
+}
+
+input.input-hamil-ya {
+    width: 40px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+input.input-sakit-lainnya {
+    width: 180px;
+    margin-left: 5px;
+}
+
+.btn-register {
+    margin: 80px auto 0;
+}
+
+body.show-dialog {
+    overflow-y: hidden;
+}
+
+.dialog {
+    position: fixed;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    z-index: 100;
+    top: 80px;
+    left: 0;
+    display: none;
+}
+
+.dialog.show {
+    display: block;
+}
+
+.dialog-background {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow-y: auto;
+    padding: 50px 0;
+}
+
+.dialog-box {
+    width: 600px;
+    background-color: white;
+    margin: 50px 0;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.dialog-close-icon {
+    width: 30px;
+    height: 30px;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.dialog-close-icon:hover {
+    background-color: #CCC;
+}
+
+.dialog-body {
+    font-size: 10pt;
+    margin-top: 30px;
+}
+
+.dialog-form-item {
+    clear: both;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.btn-confirm-submit {
+    width: 200px;
+    margin: 50px auto 10px;
+}
+
+@media all and (max-width: 767px) {
+    .section {
+        margin-top: 60px;
+        padding-top: 30px;
+    }
+
+    .section-title {
+        font-size: 20pt;
+        margin-bottom: 50px;
+    }
+
+    div.select-date {
+        width: 90vw;
+    }
+
+    .form-container {
+        width: 100vw;
+        padding: 0 5vw;
+        margin: 50px auto 0;
+    }
+
+    .form-item {
+        margin-bottom: 30px;
+    }
+    
+    .form-titikdua {
+        display: none;
+    }
+
+    .form-left {
+        margin-bottom: 5px;
+    }
+
+    .form-right {
+        letter-spacing: 1px;
+    }
+
+    .question-mark-description {
+        width: 90vw;
+        left: -56px;
+    }
+
+    .status-radio-other .radio-text, .rs-radio-ya .radio-text {
+        vertical-align: top;
+        padding-top: 6px;
+    }
+
+    .status-radio-other .radio-text-additional-input, .rs-radio-ya .radio-text-additional-input {
+        display: block;
+        margin-top: 5px;
+    }
+
+    .btn-register {
+        width: 90vw;
+    }
+
+    .dialog-header {
+        padding-top: 3px;
+    }
+
+    .dialog-box {
+        width: 100vw;
+    }
+    
+    .dialog-form-label {
+        color: #999;
+        font-size: 9pt;
+    }
+    
+    .dialog-form-value {
+        width: 345px;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .section {
+        margin-top: 80px;
+        min-height: calc(100vh - 300px);
+        padding-top: 50px;
+    }
+
+    .section-title {
+        font-size: 18pt;
+        margin-bottom: 30px;
+    }
+
+    div.select-date {
+        width: 330px;
+    }
+
+    .form-container {
+        width: 750px;
+        margin: 50px auto 0;
+    }
+
+    .form-item {
+        margin-bottom: 25px;
+    }
+
+    .form-left, .form-titikdua, .form-right {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .form-left {
+        width: 350px;
+        text-align: right;
+    }
+
+    .form-right {
+        width: 340px;
+    }
+
+    .label-jk, .label-gd, .label-address, .label-no-hp, .label-status, .label-foto-passport, .label-company-address, .label-pernah-rs, .label-sedang-sakit, .label-hamil {
+        vertical-align: top;
+        padding-top: 5px;
+    }
+
+    .btn-register {
+        width: 300px;
+    }
+
+    .dialog-form-label, .dialog-form-value {
+        float: left;
+    }
+    
+    .dialog-form-label {
+        width: 180px;
+        text-align: right;
+        margin-right: 15px;
+        color: #999;
+        font-size: 9pt;
+    }
+    
+    .dialog-form-value {
+        width: 345px;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+@media all and (min-width: 1025px) {
+
+}

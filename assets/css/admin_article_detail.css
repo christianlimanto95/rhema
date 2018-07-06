@@ -1,0 +1,154 @@
+.section-title {
+    font-size: 18pt;
+    margin-bottom: 20px;
+}
+
+.content-group {
+    clear: both;
+    margin-bottom: 50px;
+    overflow-y: auto;
+}
+
+.input-judul {
+    width: 400px;
+}
+
+.main-image {
+    margin-bottom: 60px;
+}
+
+.insert-content-text {
+    padding: 5px;
+    font-size: 12pt;
+    width: 700px;
+    height: 300px;
+    margin-bottom: 20px;
+    resize: vertical;
+}
+
+.image-container {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.btn-delete-text, .btn-delete-article-image, .btn-insert-image, .btn-insert-text {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.btn-delete-text, .btn-delete-article-image, .btn-insert-image {
+    margin-right: 20px;
+}
+
+.upload-container {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    border-radius: 2px;
+}
+
+.form-right.image-added .upload-container {
+    display: none;
+}
+
+.upload-button, .input-upload, .input-upload-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.upload-button {
+    background-color: #002157;
+}
+
+.upload-text {
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding-top: 8px;
+    font-size: 10pt;
+}
+
+.input-upload, .input-upload-main {
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.main-image-preview {
+    max-width: 700px;
+    max-height: 700px;
+}
+
+.image {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.btn-delete-image {
+    display: none;
+    margin-top: -55px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    background-color: #E53935;
+    font-size: 10pt;
+    width: 150px;
+    padding: 9px 0 10px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-delete-image:hover {
+    background-color: #D32F2F;
+}
+
+.form-right.image-added .btn-delete-image {
+    position: relative;
+    display: block;
+    z-index: 10;
+}
+
+.input-image-description {
+    display: none;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.btn-submit {
+    margin-top: 60px;
+    width: 200px;
+}
+
+.article-item {
+    display: block;
+    float: left;
+    width: 400px;
+    margin-right: 50px;
+}
+
+.article-item-image {
+    display: block;
+    max-width: 400px;
+    max-height: 300px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+}
+
+.btn-edit-article {
+    margin-top: 20px;
+    background-color: #1976D2;
+}
+
+.btn-insert-text {
+    background-color: #1976D2;
+}
+
+.btn-edit-article:hover, .btn-insert-text:hover {
+    background-color: #1565C0;
+}

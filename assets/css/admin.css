@@ -1,0 +1,76 @@
+.peserta-item {
+    overflow-y: auto;
+    margin-bottom: 30px;
+    font-size: 10pt;
+    line-height: 25px;
+}
+
+.tanggal {
+    width: 200px;
+    float: left;
+    font-size: 9pt;
+}
+
+.peserta-item-detail {
+    float: left;
+}
+
+.tour-title {
+    margin-bottom: 10px;
+}
+
+.item-label, .item-value {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.item-label {
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+    color: #777;
+    font-size: 9pt;
+}
+
+.item-value {
+    width: 400px;
+    margin-right: 20px;
+}
+
+.btn-follow-up {
+    display: inline-block;
+}
+
+.paging {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.paging-pref, .paging-page, .paging-next {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 10px;
+    font-size: 9pt;
+    border: 1px solid transparent;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.paging-pref:hover, .paging-page:hover, .paging-next:hover {
+    border: 1px solid black;
+}
+
+.paging-page {
+    width: 40px;
+}
+
+.paging-page.active {
+    border: 1px solid black;
+}
+
+.paging-pref.disabled, .paging-page.disabled, .paging-next.disabled {
+    color: #999;
+    border: 1px solid transparent;
+    cursor: default;
+}

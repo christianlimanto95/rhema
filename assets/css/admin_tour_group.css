@@ -1,0 +1,252 @@
+.section-insert .form-label-inline {
+    width: 150px;
+    text-align: right;
+}
+
+.section-insert textarea.form-input {
+    width: 300px;
+}
+
+input.input-judul {
+    width: 400px;
+}
+
+input.has-error {
+    color: red;
+    border: 1px solid red;
+}
+
+input.input-rute {
+    width: 300px;
+}
+
+.harga-container {
+    margin-bottom: 15px;
+}
+
+.harga-item {
+    margin-bottom: 20px;
+}
+
+input.input-harga {
+    width: 120px;
+}
+
+.select-kurs {
+    width: 80px;
+    min-height: 39px;
+    vertical-align: top;
+}
+
+.btn-delete-harga {
+    width: 100px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+input.input-pembimbing, input.input-cp-name-1, input.input-cp-email-1, input.input-cp-name-2, input.input-cp-email-2 {
+    width: 300px;
+}
+
+input.input-cp-hp-1, input.input-cp-hp-2 {
+    width: 170px;
+}
+
+.select {
+    min-height: 39px;
+}
+
+.select-tour-highlight, .select-tour-bonus {
+    width: 250px;
+}
+
+.btn-add-harga, .btn-add-tour-highlight, .btn-add-tour-bonus {
+    width: 160px;
+}
+
+textarea.input-cicilan, textarea.input-include-pax, textarea.input-exclude-pax, textarea.input-responsibility, textarea.input-tnc {
+    width: 600px !important;
+    height: 300px;
+}
+
+.itinerary-container {
+    float: left;
+}
+
+.btn-add-harga, .btn-add-itinerary, .btn-add-tour-highlight, .btn-add-tour-bonus, .btn-edit-tour-group-item {
+    background-color: #1976D2;
+}
+
+.btn-add-harga:hover, .btn-add-itinerary:hover, .btn-add-tour-highlight:hover, .btn-add-tour-bonus:hover, .btn-edit-tour-group-item:hover {
+    background-color: #1565C0;
+}
+
+.form-item {
+    overflow-y: auto;
+}
+
+.form-item-jenis-tour, .form-item-harga, .form-item-image-position, .form-item-tour-highlight, .form-item-tour-bonus {
+    overflow-y: visible !important;
+}
+
+.select-jenis-tour {
+    width: 150px;
+}
+
+.checkbox-outer-container {
+    padding-top: 8px;
+}
+
+.checkbox-text {
+    margin-left: 5px;
+}
+
+.itinerary-hidden-item {
+    margin-bottom: 30px;
+}
+
+.form-input-right, .itinerary-hidden-item-date, .btn-edit-itinerary, .btn-remove-itinerary {
+    display: inline-block;
+}
+
+.itinerary-hidden-item-date {
+    width: 200px;
+    margin-right: 10px;
+    border: 1px solid #999;
+    padding: 9px 10px 10px;
+}
+
+.btn-edit-itinerary {
+    margin-right: 10px;
+}
+
+.btn-insert-tour-group {
+    clear: both;
+    margin-top: 100px;
+    margin-left: 160px;
+    width: 250px;
+}
+
+.dialog-add-tour-highlight .dialog-box, .dialog-add-tour-bonus .dialog-box {
+    height: 250px;
+}
+
+.dialog-add-itinerary .dialog-box {
+    width: 700px;
+    height: 500px;
+}
+
+.dialog-add-itinerary .dialog-text {
+    height: 300px;
+    padding-right: 20px;
+    overflow-y: auto;
+}
+
+.dialog-add-itinerary .form-label-inline {
+    text-align: right;
+    width: 120px;
+}
+
+input.input-add-itinerary-date {
+    width: 150px;
+}
+
+input.input-add-itinerary-place {
+    width: 250px;
+}
+
+textarea.input-add-itinerary-remarks {
+    width: 470px;
+    height: 200px;
+}
+
+.form-right {
+    display: inline-block;
+}
+
+.select-position {
+    width: 200px;
+}
+
+.upload-container {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    border-radius: 2px;
+    box-shadow: 0 0 5px #777;
+}
+
+.form-right.image-added .upload-container {
+    display: none;
+}
+
+.upload-button, .input-upload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.upload-button {
+    background-color: #1976D2;
+}
+
+.upload-text {
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding-top: 8px;
+}
+
+.input-upload {
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.tour-group-image-preview, .dialog-add-itinerary-image-preview {
+    max-width: 450px;
+    max-height: 400px;
+}
+
+.btn-delete-tour-group-image, .btn-delete-itinerary-image {
+    display: none;
+    margin-top: -55px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+.form-right.image-added .btn-delete-tour-group-image, .form-right.image-added .btn-delete-itinerary-image {
+    position: relative;
+    display: block;
+    z-index: 10;
+}
+
+.section-update {
+    margin-top: 200px;
+}
+
+.tour-group-item {
+    width: 300px;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 50px;
+    font-size: 11pt;
+}
+
+.tour-group-item-image {
+    width: 300px;
+    height: 300px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn-edit-tour-group-item {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-decoration: none;
+}

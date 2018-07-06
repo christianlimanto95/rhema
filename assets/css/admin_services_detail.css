@@ -1,0 +1,76 @@
+.form-label-inline {
+    width: 100px;
+}
+
+.input-nama {
+    width: 400px;
+}
+
+.section textarea.form-input {
+    width: 400px;
+    height: 200px;
+}
+
+.form-right {
+    display: inline-block;
+}
+
+.upload-container {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    border-radius: 2px;
+    box-shadow: 0 0 5px #777;
+}
+
+.form-right.image-added .upload-container {
+    display: none;
+}
+
+.upload-button, .input-upload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.upload-button {
+    background-color: #1976D2;
+}
+
+.upload-text {
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding-top: 8px;
+}
+
+.input-upload {
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.tour-group-image-preview {
+    max-width: 450px;
+    max-height: 400px;
+}
+
+.btn-delete-tour-group-image {
+    display: none;
+    margin-top: -55px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+.form-right.image-added .btn-delete-tour-group-image {
+    position: relative;
+    display: block;
+    z-index: 10;
+}
+
+.btn-update {
+    margin-top: 50px;
+}

@@ -1,0 +1,223 @@
+* {
+    font-family: keepcalm;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 11pt;
+
+    -ms-touch-action: pan-x pan-y;
+    touch-action: manipulation;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+body.fixed {
+    overflow: hidden;
+}
+
+.loader {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+	width: 100px;
+	height: 100px;
+	right: 30px;
+    bottom: 30px;
+}
+
+.loader.show {
+    display: block;
+}
+
+.loader-circular {
+    -webkit-animation: rotate 1.5s linear infinite;
+    -moz-animation: rotate 1.5s linear infinite;
+    -ms-animation: rotate 1.5s linear infinite;
+    -o-animation: rotate 1.5s linear infinite;
+    animation: rotate 1.5s linear infinite;
+	height: 100px;
+	position: relative;
+    width: 100px;
+}
+
+.loader-circular-path {
+	stroke-dasharray: 1,200;
+	stroke-dashoffset: 0;
+    -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    -moz-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    -ms-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    -o-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+	stroke-linecap: round;
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes dash {
+	0% {
+		stroke-dasharray: 1,200;
+		stroke-dashoffset: 0;
+	}
+	50% {
+		stroke-dasharray: 89,200;
+		stroke-dashoffset: -35;
+	}
+	100% {
+		stroke-dasharray: 89,200;
+		stroke-dashoffset: -186;
+	}
+}
+
+@keyframes color {
+	100%, 0% {
+		stroke: #d62d20;
+	}
+	40% {
+		stroke: #0057e7;
+	}
+	66% {
+		stroke: #008744;
+	}
+	80%, 90% {
+		stroke: #ffa700;
+	}
+}
+
+.notification {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: inline-block;
+    min-width: 120px;
+    height: 54px;
+    background-color: black;
+    color: white;
+    font-size: 11pt;
+    padding: 15px 25px 0;
+    opacity: 0;
+    display: none;
+    z-index: 502;
+  }
+  
+  @-webkit-keyframes notification-showing-anim {
+    0% {
+      opacity: 0;
+    }
+  
+    5% {
+      opacity: 1;
+    }
+  
+    95% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes notification-showing-anim {
+    0% {
+      opacity: 0;
+    }
+  
+    5% {
+      opacity: 1;
+    }
+  
+    95% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .notification.showing {
+    display: block;
+    -webkit-animation: 4s linear 0s 1 normal forwards running notification-showing-anim;
+    -moz-animation: 4s linear 0s 1 normal forwards running notification-showing-anim;
+    -ms-animation: 4s linear 0s 1 normal forwards running notification-showing-anim;
+    -o-animation: 4s linear 0s 1 normal forwards running notification-showing-anim;
+    animation: 4s linear 0s 1 normal forwards running notification-showing-anim;
+  }
+  
+  .error {
+    color: red;
+    font-size: 10pt;
+    font-weight: bold;
+  }
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 420px;
+    box-shadow: 0 0 10px #AAA;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.head {
+    height: 100px;
+    padding-top: 12px;
+    background-color: rgb(24, 65, 88);
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 150px;
+    height: 53px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 10px auto 0;
+}
+
+.form-item {
+    padding: 0 20px;
+    margin-bottom: 30px;
+}
+
+.form-label {
+    margin-bottom: 5px;
+}
+
+.form-input {
+    padding: 5px;
+    width: 100%;
+}
+
+.btn-login {
+    background-color: rgb(24, 65, 88);
+    color: white;
+    width: 310px;
+    margin: 70px auto 0;
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 10pt;
+}
+
+.btn-login.disabled {
+    background-color: #CCC;
+    color: #777;
+    cursor: default;
+}

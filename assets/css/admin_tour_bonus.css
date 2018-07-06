@@ -1,0 +1,32 @@
+.item {
+    margin-bottom: 30px;
+}
+
+.item-name, .btn-update, .btn-delete {
+    display: inline-block;
+}
+
+.item-name {
+    margin-right: 10px;
+}
+
+.btn-update, .btn-delete {
+    width: 100px;
+    font-size: 10pt;
+}
+
+.btn-update {
+    margin-right: 10px;
+}
+
+.dialog-delete .dialog-box {
+    height: 220px;
+}
+
+.btn-dialog-delete {
+    background-color: #E53935;
+}
+
+.btn-dialog-delete:hover {
+    background-color: #D32F2F;
+}

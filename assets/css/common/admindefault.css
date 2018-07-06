@@ -1,0 +1,587 @@
+* {
+    font-family: keepcalm;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+
+    -ms-touch-action: pan-x pan-y;
+    touch-action: manipulation;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+body.fixed {
+    overflow: hidden;
+}
+
+.loader {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+	width: 100px;
+	height: 100px;
+	right: 30px;
+    bottom: 30px;
+}
+
+.loader.show {
+    display: block;
+}
+
+.loader-circular {
+    -webkit-animation: rotate 1.5s linear infinite;
+    -moz-animation: rotate 1.5s linear infinite;
+    -ms-animation: rotate 1.5s linear infinite;
+    -o-animation: rotate 1.5s linear infinite;
+    animation: rotate 1.5s linear infinite;
+	height: 100px;
+	position: relative;
+    width: 100px;
+}
+
+.loader-circular-path {
+	stroke-dasharray: 1,200;
+	stroke-dashoffset: 0;
+    -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    -moz-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    -ms-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    -o-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+	stroke-linecap: round;
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes dash {
+	0% {
+		stroke-dasharray: 1,200;
+		stroke-dashoffset: 0;
+	}
+	50% {
+		stroke-dasharray: 89,200;
+		stroke-dashoffset: -35;
+	}
+	100% {
+		stroke-dasharray: 89,200;
+		stroke-dashoffset: -186;
+	}
+}
+
+@keyframes color {
+	100%, 0% {
+		stroke: #d62d20;
+	}
+	40% {
+		stroke: #0057e7;
+	}
+	66% {
+		stroke: #008744;
+	}
+	80%, 90% {
+		stroke: #ffa700;
+	}
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #002157;
+    overflow-y: auto;
+    padding-bottom: 30px;
+    z-index: 1000;
+}
+
+.logo {
+    width: 150px;
+    height: 53px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 20px auto 20px;
+}
+
+.menu {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 11px 20px;
+    font-size: 11pt;
+}
+
+.menu:hover, .menu.active {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 250px;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 10px #999;
+    z-index: 999;
+    background-color: white;
+}
+
+.menu-title {
+    font-size: 20pt;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.admin-menu-icon {
+    position: fixed;
+    top: 7px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 100%;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.admin-menu-container {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    background-color: white;
+    box-shadow: 0 0 5px #999;
+    padding: 10px 0;
+    width: 130px;
+    display: none;
+}
+
+.admin-menu-container.show {
+    display: block;
+}
+
+.admin-menu {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-size: 11pt;
+}
+
+.admin-menu:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    position: fixed;
+    overflow: auto;
+    top: 70px;
+    left: 250px;
+    width: calc(100vw - 250px);
+    height: calc(100vh - 70px);
+    padding: 20px;
+    z-index: 1;
+}
+
+.section-title {
+    font-size: 18pt;
+    margin-bottom: 30px;
+}
+
+.radio-container, .checkbox-container {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.radio, .checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 100%;
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.radio {
+    border-radius: 100%;
+}
+
+.checkbox {
+    border-radius: 3px;
+}
+
+.radio:after, .checkbox:after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    top: 3px;
+    left: 3px;
+    -webkit-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0);
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.radio:after {
+    border-radius: 100%;
+}
+
+.checkbox:after {
+    border-radius: 2px;
+}
+
+.radio-container.active .radio:after, .checkbox-container.active .checkbox:after {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+.radio-text, .checkbox-text {
+    display: inline-block;
+    vertical-align: middle;
+    color: black;
+}
+
+.btn {
+    width: 150px;
+    padding: 10px 0 11px;
+    color: white;
+    text-align: center;
+    font-size: 10pt;
+    cursor: pointer;
+    box-shadow: 0 0 5px #777;
+    border-radius: 2px;
+    background-color: #388E3C;
+}
+
+.btn:hover {
+    background-color: #2E7D32;
+}
+
+.btn-update {
+    background-color: #1E88E5;
+}
+
+.btn-update:hover {
+    background-color: #1976D2;
+}
+
+.btn-negative {
+    background-color: #F44336;
+}
+
+.btn-negative:hover {
+    background-color: #E53935;
+}
+
+.btn.disabled, .btn.disabled:hover {
+    background-color: #DDD !important;
+    color: #999 !important;
+    cursor: default;
+}
+
+.success-message, .error-message {
+    font-size: 10pt;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.success-message {
+    background-color: #C8E6C9;
+    color: #1B5E20;
+}
+
+.error-message {
+    background-color: #FFCDD2;
+    color: #F44336;
+}
+
+.section {
+    clear: both;
+    margin-bottom: 60px;
+}
+
+.form-item, .form-item-inline {
+    margin-bottom: 20px;
+    font-size: 10pt;
+}
+
+.form-item {
+    clear: both;
+}
+
+.form-item-inline {
+    float: left;
+}
+
+.form-label-inline, .form-input-inline {
+    float: left;
+}
+
+.form-label-inline {
+    margin-right: 10px;
+    padding-top: 7px;
+}
+
+.form-label {
+    margin-bottom: 5px;
+}
+
+input.form-input, input.form-input-inline, textarea.form-input, textarea.form-input-inline  {
+    font-size: 10pt;
+    padding: 8px;
+    border: 1px solid #999;
+}
+
+textarea.form-input, textarea.form-input-inline {
+    resize: vertical;
+    height: 85px;
+}
+
+.error, .error-inline {
+    color: red;
+    font-size: 10pt;
+    margin-left: 5px;
+}
+
+.error-inline {
+    display: inline-block;
+}
+
+.dropdown-container {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 45px;
+    left: 0;
+    max-height: 300px;
+    overflow: auto;
+    background-color: white;
+    padding: 10px 0;
+    border: 1px solid #AAA;
+    box-shadow: 0 0 2px #999;
+    z-index: 10;
+}
+
+.dropdown-container.show {
+	display: block;
+}
+
+.dropdown-item {
+	padding: 10px 15px;
+	cursor: pointer;
+	font-size: 10pt;
+}
+
+.dropdown-item:hover {
+	background-color: #EEE;
+}
+
+.select {
+    display: inline-block;
+    border: 1px solid #999;
+    padding: 8px 10px;
+    font-size: 10pt;
+    position: relative;
+    cursor: pointer;
+}
+
+.select:nth-child(1) {
+    border-left: 1px solid #999;
+}
+
+.dropdown-icon {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.dialog {
+    position: fixed;
+    width: calc(100vw - 250px);
+    height: calc(100vh - 70px);
+    top: 70px;
+    left: 250px;
+    z-index: 500;
+    display: none;
+}
+  
+.dialog.show {
+    display: block;
+}
+  
+.dialog-background {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+  
+.dialog-box {
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+  
+.dialog-box:before {
+    content: "";
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+  
+.dialog-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5vw;
+    line-height: 2.2vw;
+}
+  
+.dialog-close-icon {
+    width: 30px;
+    height: 30px;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+  
+.dialog-close-icon:hover {
+    background-color: #E0E0E0;
+}
+  
+.dialog-text {
+    font-size: 12pt;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 20px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+  
+.dialog-button-container {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+}
+  
+.dialog-button-container .dialog-button {
+    display: inline-block;
+    width: 100px;
+}
+  
+.dialog-button-container .dialog-button:not(:nth-last-child(1)) {
+    margin-right: 10px;
+}
+
+.btn-dialog-cancel {
+    background-color: #999;
+}
+  
+.btn-dialog-cancel:hover {
+    background-color: #777;
+}
+
+.notification {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: inline-block;
+    min-width: 120px;
+    height: 54px;
+    background-color: black;
+    color: white;
+    font-size: 10pt;
+    padding: 15px 25px 0;
+    opacity: 0;
+    display: none;
+    z-index: 502;
+}
+  
+@-webkit-keyframes notification-showing-anim {
+    0% {
+      opacity: 0;
+    }
+  
+    5% {
+      opacity: 1;
+    }
+  
+    95% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+    }
+}
+  
+@keyframes notification-showing-anim {
+    0% {
+      opacity: 0;
+    }
+  
+    5% {
+      opacity: 1;
+    }
+  
+    95% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+    }
+}
+  
+.notification.showing {
+    display: block;
+    -webkit-animation: 4s linear 0s 1 normal forwards running notification-showing-anim;
+    -moz-animation: 4s linear 0s 1 normal forwards running notification-showing-anim;
+    -ms-animation: 4s linear 0s 1 normal forwards running notification-showing-anim;
+    -o-animation: 4s linear 0s 1 normal forwards running notification-showing-anim;
+    animation: 4s linear 0s 1 normal forwards running notification-showing-anim;
+}

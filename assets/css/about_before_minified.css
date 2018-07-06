@@ -1,0 +1,249 @@
+.header-fixed {
+    top: 0;
+}
+
+.dark-subheader-detail {
+    -webkit-animation-delay: 0.1s;
+    -moz-animation-delay: 0.1s;
+    -ms-animation-delay: 0.1s;
+    -o-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+.section {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.about-image-container, .about-image-container-mobile {
+    -webkit-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+    -ms-animation-delay: 0.2s;
+    -o-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.about-header-text {
+    color: #002157;
+}
+
+.about-title {
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+    -ms-animation-delay: 0.3s;
+    -o-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.about-description {
+    -webkit-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+    -ms-animation-delay: 0.4s;
+    -o-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.team-container {
+    color: #002157;
+    overflow-x: hidden;
+}
+
+.team-image {
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+@media all and (max-width: 767px) {
+    .section {
+        margin-top: 60px;
+        padding-top: 30px;
+    }
+
+    .about-header {
+        margin-top: 60px;
+        position: relative;
+    }
+
+    .about-image-container {
+        display: none;
+    }
+
+    .about-image-container-mobile {
+        width: 100vw;
+        margin-left: -5vw;
+        margin-bottom: 20px;
+    }
+
+    .about-image {
+        width: 100%;
+    }
+
+    .about-header-text {
+        width: 90vw;
+        margin-left: 5vw;
+    }
+
+    .about-title {
+        font-size: 22pt;
+        margin-bottom: 20px;
+    }
+
+    .about-description {
+        font-size: 10pt;
+        line-height: 25px;
+    }
+
+    .team-container {
+        margin-top: 100px;
+        width: 100vw;
+        padding: 0 5vw;
+    }
+
+    .team-title {
+        font-size: 22pt;
+        margin-bottom: 50px;
+    }
+
+    .team {
+        width: 90vw;
+        margin-bottom: 50px;
+    }
+
+    .team:nth-last-child(1) {
+        margin-bottom: 0;
+    }
+
+    .team-image {
+        width: 90vw;
+        height: 90vw;
+    }
+
+    .team-name {
+        font-size: 16pt;
+        margin-top: 10px;
+    }
+    
+    .team-job {
+        font-size: 10pt;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .section {
+        margin-top: 80px;
+        min-height: calc(100vh - 300px);
+        padding-top: 50px;
+    }
+
+    .about-header {
+        margin-top: 70px;
+    }
+
+    .about-image-container {
+        display: inline-block;
+    }
+
+    .about-image-container-mobile {
+        display: none;
+    }
+
+    .about-header-text {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .about-title {
+        font-size: 22pt;
+        margin-bottom: 20px;
+    }
+
+    .about-description {
+        font-size: 10pt;
+        line-height: 25px;
+        text-align: justify;
+    }
+
+    .team-container {
+        margin-top: 100px;
+    }
+
+    .team-title {
+        font-size: 22pt;
+        margin-bottom: 30px;
+    }
+
+    .team {
+        float: left;
+    }
+    
+    .team:nth-child(4n) {
+        margin-right: 0;
+    }
+
+    .team-name {
+        font-size: 12pt;
+        margin-top: 10px;
+    }
+    
+    .team-job {
+        font-size: 8pt;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .about-image {
+        width: 42vw;
+    }
+
+    .about-header-text {
+        width: 51vw;
+        margin-left: 2vw;
+    }
+
+    .team-container {
+        width: 100vw;
+        padding: 0 5vw;
+    }
+
+    .team {
+        width: 21.5vw;
+        margin-right: 1.33vw;
+        margin-bottom: 5vw;
+    }
+
+    .team-image {
+        width: 21.5vw;
+        height: 21.5vw;
+    }
+}
+
+@media all and (min-width: 1025px) {
+    .about-image {
+        width: 40vw;
+    }
+
+    .about-header-text {
+        width: 46vw;
+        margin-left: 4vw;
+    }
+
+    .team-container {
+        width: 103vw;
+        padding: 0 10vw;
+    }
+
+    .team {
+        width: 19vw;
+        margin-right: 1.33vw;
+        margin-bottom: 3vw;
+    }
+
+    .team-image {
+        width: 19vw;
+        height: 19vw;
+    }
+
+    .team-name {
+        margin-bottom: 5px;
+    }
+}
