@@ -364,7 +364,7 @@ for ($i = 0; $i < $iLength; $i++) {
         id: '" . $itinerary[$i]->tgi_kode . "',
         date: '" . $itinerary[$i]->tgi_tanggal . "',
         place: '" . $itinerary[$i]->tgi_place . "',
-        remarks: '" . str_replace(array("\r\n","\r","\n","\\r","\\n","\\r\\n"), "<br />", $itinerary[$i]->tgi_remarks) . "'.replace(/<br\s*\/?>/mg, " . '"\n"' . "),
+        remarks: " . '"' . str_replace(array("\r\n","\r","\n","\\r","\\n","\\r\\n"), "<br />", $itinerary[$i]->tgi_remarks) . '"' . ".replace(/<br\s*\/?>/mg, " . '"\n"' . "),
         image_1_extension: '" . $itinerary[$i]->tgi_image_1_extension . "',
         image_2_extension: '" . $itinerary[$i]->tgi_image_2_extension . "',
         image_3_extension: '" . $itinerary[$i]->tgi_image_3_extension . "',

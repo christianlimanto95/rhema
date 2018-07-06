@@ -57,9 +57,19 @@ class Register_tour_model extends CI_Model
             $where_month = " AND MONTH(tg.tg_tglStart) = '" . $data["month"] . "'";
         }
 
+        $where_month_tour_package = "";
+        if ($data["month"] != "all") {
+            $where_month_tour_package = " AND MONTH(tpd.tg_tglStart) = '" . $data["month"] . "'";
+        }
+
         $where_year = "";
         if ($data["year"] != "all") {
             $where_year = " AND YEAR(tg.tg_tglStart) = '" . $data["year"] . "'";
+        }
+
+        $where_year_tour_package = "";
+        if ($data["year"] != "all") {
+            $where_year_tour_package = " AND YEAR(tpd.tg_tglStart) = '" . $data["year"] . "'";
         }
 
         $where_tour = "";
@@ -82,7 +92,7 @@ class Register_tour_model extends CI_Model
                 FROM (SELECT tpd_kode, tg_kode, tg_tglStart, tg_tglEnd FROM tour_package_date) tpd, tour_group tg
                 LEFT JOIN (SELECT tg_kode, MIN(tgha_harga) AS tgha_harga, tgha_kurs FROM tour_group_harga GROUP BY tg_kode) tgha
                 ON tg.tg_kode = tgha.tg_kode
-                WHERE tg.status = 1 AND tg.tg_jenis = 2 AND tg.tg_kode = tpd.tg_kode AND tpd.tg_tglStart > CURDATE()" . $where_month . $where_year . $where_tour . ") b
+                WHERE tg.status = 1 AND tg.tg_jenis = 2 AND tg.tg_kode = tpd.tg_kode AND tpd.tg_tglStart > CURDATE()" . $where_month_tour_package . $where_year_tour_package . $where_tour . ") b
             ORDER BY tg_tglStart
             LIMIT " . $view_per_page . " OFFSET " . $offset . "
         ");
@@ -95,9 +105,19 @@ class Register_tour_model extends CI_Model
             $where_month = " AND MONTH(tg.tg_tglStart) = '" . $data["month"] . "'";
         }
 
+        $where_month_tour_package = "";
+        if ($data["month"] != "all") {
+            $where_month_tour_package = " AND MONTH(tpd.tg_tglStart) = '" . $data["month"] . "'";
+        }
+
         $where_year = "";
         if ($data["year"] != "all") {
             $where_year = " AND YEAR(tg.tg_tglStart) = '" . $data["year"] . "'";
+        }
+
+        $where_year_tour_package = "";
+        if ($data["year"] != "all") {
+            $where_year_tour_package = " AND YEAR(tpd.tg_tglStart) = '" . $data["year"] . "'";
         }
 
         $where_tour = "";
@@ -117,7 +137,7 @@ class Register_tour_model extends CI_Model
                 FROM
                     (SELECT tg.tg_kode
                     FROM (SELECT tpd_kode, tg_kode, tg_tglStart, tg_tglEnd FROM tour_package_date) tpd, tour_group tg
-                    WHERE tg.status = 1 AND tg.tg_jenis = 2 AND tg.tg_kode = tpd.tg_kode AND tpd.tg_tglStart > CURDATE()" . $where_month . $where_year . $where_tour . ") b) c
+                    WHERE tg.status = 1 AND tg.tg_jenis = 2 AND tg.tg_kode = tpd.tg_kode AND tpd.tg_tglStart > CURDATE()" . $where_month_tour_package . $where_year_tour_package . $where_tour . ") b) c
         ");
         return $query->result();
     }
